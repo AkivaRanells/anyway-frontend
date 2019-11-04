@@ -1,5 +1,5 @@
 import React from "react";
-import { Map } from "react-leaflet";
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import ReactLeafletGoogleLayer from "react-leaflet-google-layer";
@@ -30,14 +30,14 @@ const TempAnywayMap = (props: Props) => {
         preferCanvas={true}
         zoomControl={true}
         ref={props.leafletRef}
-        
-      >
+      ></Map>
         <ReactLeafletGoogleLayer
           googleMapsLoaderConf={{
             KEY: "AIzaSyDUIWsBLkvIUwzLHMHos9qFebyJ63hEG2M",
             VERSION: "3.37"
           }}
-        />        
+        />
+        <L.marker()        
       </Map>
     </div>
   );
