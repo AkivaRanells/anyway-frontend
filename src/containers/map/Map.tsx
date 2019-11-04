@@ -20,7 +20,6 @@ interface Props {
 
 const TempAnywayMap = (props: Props) => {
   const position = [32.0461, 34.8516] as [number, number];
-
   return (
     <div className={styles.mapContainer}>
       <Map
@@ -31,6 +30,7 @@ const TempAnywayMap = (props: Props) => {
         preferCanvas={true}
         zoomControl={true}
         ref={props.leafletRef}
+        
       >
         <ReactLeafletGoogleLayer
           googleMapsLoaderConf={{
