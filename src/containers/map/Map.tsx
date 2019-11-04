@@ -1,5 +1,5 @@
 import React from "react";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import ReactLeafletGoogleLayer from "react-leaflet-google-layer";
@@ -31,13 +31,16 @@ const TempAnywayMap = (props: Props) => {
         zoomControl={true}
         ref={props.leafletRef}
       >
+
+        <Marker position={position}>
+          <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+        </Marker>
         <ReactLeafletGoogleLayer
           googleMapsLoaderConf={{
             KEY: "AIzaSyDUIWsBLkvIUwzLHMHos9qFebyJ63hEG2M",
             VERSION: "3.37"
           }}
         />
-        <L.marker()        
       </Map>
     </div>
   );
