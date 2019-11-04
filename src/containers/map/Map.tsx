@@ -30,7 +30,7 @@ const TempAnywayMap = (props: Props) => {
         preferCanvas={true}
         zoomControl={true}
         ref={props.leafletRef}
-      ></Map>
+      >
         <ReactLeafletGoogleLayer
           googleMapsLoaderConf={{
             KEY: "AIzaSyDUIWsBLkvIUwzLHMHos9qFebyJ63hEG2M",
