@@ -1,10 +1,10 @@
 import React from "react";
-import { Map, Marker, Popup, Polygon } from "react-leaflet";
+import { Map, Marker, Popup } from "react-leaflet"; //Polygon
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import ReactLeafletGoogleLayer from "react-leaflet-google-layer";
 import styles from "./Map.module.css";
-import { features } from "./yehud_monoson.json";
+// import { features } from "./yehud_monoson.json";
 //features[0].geometry.coordinates as [[[number, number]]];
 /* This code is needed to properly load the images in the Leaflet CSS */
 // @ts-ignore
@@ -22,11 +22,11 @@ interface Props {
 
 const TempAnywayMap = (props: Props) => {
   const position = [32.0461, 34.8516] as [number, number];
-  const latlngs = [[51.515, -0.09], [51.52, -0.1], [51.52, -0.12]] as [[number, number],[number, number],[number,number]] ;
+  // const latlngs = [[51.515, -0.09], [51.52, -0.1], [51.52, -0.12]] as [[number, number],[number, number],[number,number]] ;
   return (
     <div className={styles.mapContainer}>
       <Map
-        style={{ height: "100vh" }}
+        style={{ height: "35vh" }}
         center={position}
         zoom={12}
         maxZoom={30}
@@ -45,7 +45,7 @@ const TempAnywayMap = (props: Props) => {
             VERSION: "3.37"
           }}
         />
-        <Polygon color='red' positions={latlngs}/>
+        {/* <Polygon color='red' positions={latlngs}/> */}
       </Map>
     </div>
   );
